@@ -28,9 +28,9 @@ public static class CommandsRegisterer
                         
                     }
                     
-                    if (type.BaseType != typeof(Command))
+                    if (!type.IsSubclassOf(typeof(Command)))
                     {
-                        throw new Exception("Command type must implement Command class");
+                        throw new Exception($"Command {type.Name} type must implement Command class");
                     }
 
                     commands.Add(cmd.Name, type);
