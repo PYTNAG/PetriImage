@@ -49,4 +49,6 @@ public abstract class Command
             _flags.First(f => f.Key.Invoke(flag)).Value.Invoke(this, [.. flagArgs]);
         }
     }
+
+    public abstract void Execute();
 } 
