@@ -6,6 +6,9 @@ namespace PetriImageCLI.Commands;
 
 internal abstract class CommandBase : Command
 {
+    // [<subcommand>...]
+    protected readonly string _subcommandsList;
+
     // <flag> [, <alias>...] [: <description>]
     protected readonly string _flagsDescription;
 
@@ -24,5 +27,18 @@ internal abstract class CommandBase : Command
         }
 
         _flagsDescription = description.ToString();
+
+        List<string> subcommands = [];
+
+        foreach (var nestedType in GetType().GetNestedTypes())
+        {
+            CommandAttribute? cmd = nestedType.GetCustomAttribute<CommandAttribute>();
+            if (cmd is not null)
+            {
+                subcommands.Add(cmd.Name);
+            }
+        }
+
+        _subcommandsList = string.Join(", ", subcommands);
     }
 }
