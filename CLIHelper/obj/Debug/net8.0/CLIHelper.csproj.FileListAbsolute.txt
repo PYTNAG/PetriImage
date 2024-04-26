@@ -1,0 +1,11 @@
+/home/pytnag/Desktop/PetriImage/CLIHelper/bin/Debug/net8.0/CLIHelper.deps.json
+/home/pytnag/Desktop/PetriImage/CLIHelper/bin/Debug/net8.0/CLIHelper.dll
+/home/pytnag/Desktop/PetriImage/CLIHelper/bin/Debug/net8.0/CLIHelper.pdb
+/home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/CLIHelper.GeneratedMSBuildEditorConfig.editorconfig
+/home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/CLIHelper.AssemblyInfoInputs.cache
+/home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/CLIHelper.AssemblyInfo.cs
+/home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/CLIHelper.csproj.CoreCompileInputs.cache
+/home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/CLIHelper.dll
+/home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/refint/CLIHelper.dll
+/home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/CLIHelper.pdb
+/home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/ref/CLIHelper.dll
