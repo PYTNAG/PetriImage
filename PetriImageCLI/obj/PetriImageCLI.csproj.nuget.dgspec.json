@@ -61,7 +61,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "/home/pytnag/Desktop/PetriImage/PetriImageCLI/PetriImageCLI.csproj",
-        "projectName": "PetriImageCLI",
+        "projectName": "petrii",
         "projectPath": "/home/pytnag/Desktop/PetriImage/PetriImageCLI/PetriImageCLI.csproj",
         "packagesPath": "/home/pytnag/.nuget/packages/",
         "outputPath": "/home/pytnag/Desktop/PetriImage/PetriImageCLI/obj/",

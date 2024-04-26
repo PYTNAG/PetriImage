@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "PetriImageCLI/1.0.0": {
+      "petrii/1.0.0": {
         "dependencies": {
           "CLIHelper": "1.0.0",
           "Cells": "1.0.0.0"
         },
         "runtime": {
-          "PetriImageCLI.dll": {}
+          "petrii.dll": {}
         }
       },
       "CLIHelper/1.0.0": {
@@ -39,7 +39,7 @@
     }
   },
   "libraries": {
-    "PetriImageCLI/1.0.0": {
+    "petrii/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
