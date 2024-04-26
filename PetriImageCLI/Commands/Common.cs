@@ -5,15 +5,22 @@ namespace PetriImageCLI.Commands;
 [Command("common")]
 public sealed class Common : Command
 {
+    private static string _output = string.Empty;
+
     [Flag("--help", [ "-h", "-?" ])]
     public static void Help()
     {
-        Console.WriteLine("this is --help -? -h");
+        _output = "this is --help -? -h";
     }
 
     [Flag("--test")]
     public static void Test()
     {
-        Console.WriteLine("this is test");
+        _output = "this is test";
+    }
+
+    public override void Execute()
+    {
+        Console.WriteLine(_output);
     }
 }
