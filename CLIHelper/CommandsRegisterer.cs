@@ -14,6 +14,11 @@ public static class CommandsRegisterer
         {
             foreach (Type type in assembly.GetTypes())
             {
+                if (type.IsNested)
+                {
+                    continue;
+                }
+
                 CommandAttribute? cmd = type.GetCustomAttribute<CommandAttribute>();
                 if (cmd is not null)
                 {
