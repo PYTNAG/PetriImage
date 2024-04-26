@@ -1,23 +1,21 @@
+using System.Reflection;
 using CLIHelper;
 
 namespace PetriImageCLI.Commands;
 
 [Command("common")]
-public sealed class Common : Command
+internal sealed class Common : CommandBase
 {
-    private static string _output = string.Empty;
+    private string _output = string.Empty;
 
-    [Flag("--help", [ "-h", "-?" ])]
-    public static void Help()
+    [HelpFlag]
+    public void Help()
     {
-        _output = "this is --help -? -h";
-    }
-
-    [Flag("--test")]
-    public static void Test()
-    {
-        _output = "this is test";
-    }
+        _output = 
+            $"usage: petrii [{GetType().GetCustomAttribute<CommandAttribute>()!.Name}] [<flag>...]\n\n"
+            + $"{(_subcommandsList == string.Empty ? string.Empty : "subcommands:" + _subcommandsList + "\n\n")}"
+            + $"flags:\n{_flagsDescription}";
+    }    
 
     public override void Execute()
     {
