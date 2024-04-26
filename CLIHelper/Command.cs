@@ -1,24 +1,27 @@
+using System.Collections.ObjectModel;
 using System.Reflection;
 
 namespace CLIHelper;
 
 public abstract class Command
 {
-    private readonly Dictionary<Predicate<string>, MethodInfo> _flags;
+    protected readonly ReadOnlyDictionary<Predicate<string>, MethodInfo> _flags;
 
     public Command()
     {
-        _flags = [];
+        Dictionary<Predicate<string>, MethodInfo> flags = [];
 
         foreach (var methodInfo in GetType().GetMethods())
         {
             FlagAttribute? flag = methodInfo.GetCustomAttribute<FlagAttribute>();
             if (flag is not null)
             {
-                _flags.Add(flag.IsNameOrAlias, methodInfo);
+                flags.Add(flag.IsNameOrAlias, methodInfo);
                 continue;
             }
         }
+
+        _flags = flags.AsReadOnly();
     }
     
     public void Parse(string[] args)
