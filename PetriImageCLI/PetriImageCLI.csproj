@@ -9,12 +9,6 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <Reference Include="KletkaLib.Cells">
-      <HintPath>../include/net6.0/Cells.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  
-  <ItemGroup>
     <ProjectReference Include="..\CLIHelper\CLIHelper.csproj" />
   </ItemGroup>
 
