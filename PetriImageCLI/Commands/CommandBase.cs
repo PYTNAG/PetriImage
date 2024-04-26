@@ -12,6 +12,8 @@ internal abstract class CommandBase : Command
     // <flag> [, <alias>...] [: <description>]
     protected readonly string _flagsDescription;
 
+    protected readonly string _usage;
+
     public CommandBase() : base()
     {
         StringBuilder description = new();
@@ -40,5 +42,10 @@ internal abstract class CommandBase : Command
         }
 
         _subcommandsList = string.Join(", ", subcommands);
+
+        _usage = 
+            $"usage: petrii [{GetType().GetCustomAttribute<CommandAttribute>()!.Name}] [<flag>...]\n\n" +
+            $"{(_subcommandsList == string.Empty ? string.Empty : "subcommands:" + _subcommandsList + "\n\n")}" +
+            $"flags:\n{_flagsDescription}";
     }
 }

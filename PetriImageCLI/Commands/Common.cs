@@ -11,11 +11,8 @@ internal sealed class Common : CommandBase
     [HelpFlag]
     public void Help()
     {
-        _output = 
-            $"usage: petrii [{GetType().GetCustomAttribute<CommandAttribute>()!.Name}] [<flag>...]\n\n"
-            + $"{(_subcommandsList == string.Empty ? string.Empty : "subcommands:" + _subcommandsList + "\n\n")}"
-            + $"flags:\n{_flagsDescription}";
-    }    
+        _output = _usage;
+    } 
 
     public override void Execute()
     {
