@@ -10,6 +10,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\CLIHelper\CLIHelper.csproj" />
+    <ProjectReference Include="..\PetriImage.Core\PetriImage.Core.csproj" />
   </ItemGroup>
 
 </Project>
