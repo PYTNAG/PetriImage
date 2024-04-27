@@ -61,6 +61,6 @@ internal abstract class CommandBase : Command
 
     public override void Execute()
     {
-        Console.WriteLine(_finalMessage);
+        Console.WriteLine("\n" + _finalMessage + "\n");
     }
 }
