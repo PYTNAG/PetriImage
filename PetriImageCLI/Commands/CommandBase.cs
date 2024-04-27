@@ -6,8 +6,6 @@ namespace PetriImageCLI.Commands;
 
 internal abstract class CommandBase : Command
 {
-    protected string _finalMessage;
-
     // [<subcommand>...]
     protected readonly string _subcommandsList;
 
@@ -18,8 +16,6 @@ internal abstract class CommandBase : Command
 
     public CommandBase() : base()
     {
-        _finalMessage = string.Empty;
-
         StringBuilder description = new();
             
         foreach (var (_, flagMethod) in _flags)
@@ -54,13 +50,8 @@ internal abstract class CommandBase : Command
     }
 
     [HelpFlag]
-    public void Help()
+    public void PrintHelp()
     {
-        _finalMessage = _usage;
-    }
-    
-    public void PrintFinalMessage()
-    {
-        Console.WriteLine("\n" + _finalMessage + "\n");
+        Console.WriteLine("\n" + _usage + "\n");
     }
 }
