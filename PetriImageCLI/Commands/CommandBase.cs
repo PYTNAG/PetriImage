@@ -58,8 +58,8 @@ internal abstract class CommandBase : Command
     {
         _finalMessage = _usage;
     }
-
-    public override void Execute()
+    
+    public void PrintFinalMessage()
     {
         Console.WriteLine("\n" + _finalMessage + "\n");
     }
