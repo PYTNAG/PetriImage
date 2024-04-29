@@ -6,8 +6,8 @@ var commands = CommandsRegisterer.RegisterCommands();
 
 if (args.Length == 0)
 {
-    Common cmd = new();
-    cmd.Help();
+    Global cmd = new();
+    cmd.PrintHelp();
     cmd.Execute();
 
     return;
@@ -16,7 +16,7 @@ if (args.Length == 0)
 if (args[0].StartsWith('-'))
 {
     args = [
-        typeof(Common).GetCustomAttribute<CommandAttribute>()!.Name, 
+        typeof(Global).GetCustomAttribute<CommandAttribute>()!.Name, 
         ..args
     ];
 }
@@ -31,8 +31,8 @@ if (commands.TryGetValue(args[0], out Type? commandType))
 }
 else
 {
-    Common cmd = new();
-    cmd.Help();
+    Global cmd = new();
+    cmd.PrintHelp();
     cmd.Execute();
 
     return;
