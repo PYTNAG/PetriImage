@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Cells/1.0.0": {
+        "dependencies": {
+          "Chains": "1.0.0"
+        },
+        "runtime": {
+          "Cells.dll": {}
+        }
+      },
+      "Chains/1.0.0": {
+        "runtime": {
+          "Chains.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cells/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Chains/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
