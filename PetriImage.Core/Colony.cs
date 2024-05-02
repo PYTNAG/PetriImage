@@ -9,7 +9,7 @@ public sealed class Colony
     private byte[] CachedCellsSerialization {
         get
         {
-            _cachedCellsSerialization ??= _cells.SelectMany(c => c.ByteSerialization()).ToArray();
+            _cachedCellsSerialization ??= _cells.SelectMany(Serializator.GetBytes).ToArray();
             return _cachedCellsSerialization;
         }
     }
