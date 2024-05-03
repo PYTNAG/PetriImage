@@ -1,39 +1,19 @@
-﻿using System.Reflection;
-using CLIHelper;
-using PetriImageCLI.Commands;
+﻿using PetriImageCLI.Commands;
 
-var commands = CommandsRegisterer.RegisterCommands();
+Global global = new();
 
 if (args.Length == 0)
 {
-    Global cmd = new();
-    cmd.PrintHelp();
-    cmd.Execute();
-
+    global.PrintHelp();
     return;
 }
 
-if (args[0].StartsWith('-'))
+try
 {
-    args = [
-        typeof(Global).GetCustomAttribute<CommandAttribute>()!.Name, 
-        ..args
-    ];
+    global.ParseFlags(args);
 }
-
-if (commands.TryGetValue(args[0], out Type? commandType))
+catch (Exception e)
 {
-    string[] commandArgs = args[1..];
-    Command command = (Activator.CreateInstance(commandType) as Command)!;
-
-    command.Parse(commandArgs);
-    command.Execute();
-}
-else
-{
-    Global cmd = new();
-    cmd.PrintHelp();
-    cmd.Execute();
-
-    return;
+    Console.Write($"{e.Message}\n");
+    global.PrintHelp();
 }

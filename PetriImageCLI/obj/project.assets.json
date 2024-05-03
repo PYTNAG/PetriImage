@@ -11,6 +11,16 @@
         "runtime": {
           "bin/placeholder/CLIHelper.dll": {}
         }
+      },
+      "PetriImage.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/PetriImage.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetriImage.Core.dll": {}
+        }
       }
     }
   },
@@ -19,11 +29,17 @@
       "type": "project",
       "path": "../CLIHelper/CLIHelper.csproj",
       "msbuildProject": "../CLIHelper/CLIHelper.csproj"
+    },
+    "PetriImage.Core/1.0.0": {
+      "type": "project",
+      "path": "../PetriImage.Core/PetriImage.Core.csproj",
+      "msbuildProject": "../PetriImage.Core/PetriImage.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "CLIHelper >= 1.0.0"
+      "CLIHelper >= 1.0.0",
+      "PetriImage.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,6 +69,9 @@
           "projectReferences": {
             "/home/pytnag/Desktop/PetriImage/CLIHelper/CLIHelper.csproj": {
               "projectPath": "/home/pytnag/Desktop/PetriImage/CLIHelper/CLIHelper.csproj"
+            },
+            "/home/pytnag/Desktop/PetriImage/PetriImage.Core/PetriImage.Core.csproj": {
+              "projectPath": "/home/pytnag/Desktop/PetriImage/PetriImage.Core/PetriImage.Core.csproj"
             }
           }
         }
