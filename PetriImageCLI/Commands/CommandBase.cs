@@ -50,6 +50,7 @@ internal abstract class CommandBase : Command
     }
 
     [HelpFlag]
+    [Description("prints all subcommands and flags")]
     public void PrintHelp()
     {
         Console.WriteLine("\n" + _usage + "\n");
