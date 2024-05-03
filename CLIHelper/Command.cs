@@ -24,7 +24,7 @@ public abstract class Command
         _flags = flags.AsReadOnly();
     }
     
-    public void Parse(string[] args)
+    public void ParseFlags(string[] args)
     {
         if (args.Length == 0)
         {
@@ -33,23 +33,24 @@ public abstract class Command
 
         if (!args[0].StartsWith('-'))
         {
-            throw new ArgumentException("first argument must be flag and starts with hyphen");
+            throw new ArgumentException("First argument must be flag and starts with hyphen");
         }
 
         int pointer = 0;
         while (pointer < args.Length)
         {
-            string flag = args[pointer];
+            string flagName = args[pointer++];
 
-            ++pointer;
-            List<string> flagArgs = [];
+            List<string> flagParams = [];
+
             while (pointer < args.Length && !args[pointer].StartsWith('-'))
             {
-                flagArgs.Add(args[pointer]);
-                ++pointer;
+                flagParams.Add(args[pointer++]);
             }
 
-            _flags.First(f => f.Key.Invoke(flag)).Value.Invoke(this, [.. flagArgs]);
+            _flags
+                .First(flagInfo => flagInfo.Key(flagName)) // first flag with name <flagName>
+                .Value.Invoke(this, [..flagParams]); // invoke flag method with given params
         }
     }
 
