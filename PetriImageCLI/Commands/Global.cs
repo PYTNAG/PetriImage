@@ -32,6 +32,8 @@ internal sealed class Global : CommandBase
         }
 
         Command cmd = (Activator.CreateInstance(executableCommandType) as Command)!;
+        
         cmd.ParseFlags(args[argPointer..]);
+        cmd.Execute();
     }
 }
