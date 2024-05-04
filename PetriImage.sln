@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLIHelper", "CLIHelper\CLIH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetriImage.Core", "PetriImage.Core\PetriImage.Core.csproj", "{DEADCACF-A13B-4732-8C56-511A5F8D7726}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{2DC419BE-27BA-4024-B555-6211B61D4768}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{DEADCACF-A13B-4732-8C56-511A5F8D7726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEADCACF-A13B-4732-8C56-511A5F8D7726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEADCACF-A13B-4732-8C56-511A5F8D7726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DC419BE-27BA-4024-B555-6211B61D4768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC419BE-27BA-4024-B555-6211B61D4768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC419BE-27BA-4024-B555-6211B61D4768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC419BE-27BA-4024-B555-6211B61D4768}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
