@@ -10,7 +10,7 @@ if (args.Length == 0)
 
 try
 {
-    global.ParseFlags(args);
+    global.ParseArgs(args);
 }
 catch (Exception e)
 {
