@@ -9,7 +9,7 @@
       "petrii/1.0.0": {
         "dependencies": {
           "CLIHelper": "1.0.0",
-          "Cells": "1.0.0.0"
+          "PetriImage.Core": "1.0.0"
         },
         "runtime": {
           "petrii.dll": {}
@@ -18,6 +18,11 @@
       "CLIHelper/1.0.0": {
         "runtime": {
           "CLIHelper.dll": {}
+        }
+      },
+      "PetriImage.Core/1.0.0": {
+        "runtime": {
+          "PetriImage.Core.dll": {}
         }
       },
       "Cells/1.0.0.0": {
@@ -45,6 +50,11 @@
       "sha512": ""
     },
     "CLIHelper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetriImage.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

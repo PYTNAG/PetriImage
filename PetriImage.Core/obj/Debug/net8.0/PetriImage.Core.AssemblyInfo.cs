@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetriImage.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f70c222b2c717b935b595d37f0030337fc73e4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7d617c3da579864f0251a311b7aeafbbed0f6f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetriImage.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetriImage.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

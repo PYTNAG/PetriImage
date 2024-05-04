@@ -7,12 +7,10 @@ namespace PetriImageCLI.Commands;
 internal abstract class CommandBase : Command
 {
     // [<subcommand>...]
-    protected readonly string _subcommandsList;
+    protected List<string> _subcommandsList;
 
     // <flag> [, <alias>...] [: <description>]
     protected readonly string _flagsDescription;
-
-    protected readonly string _usage;
 
     public CommandBase() : base()
     {
@@ -41,18 +39,19 @@ internal abstract class CommandBase : Command
             }
         }
 
-        _subcommandsList = string.Join(", ", subcommands);
-
-        _usage = 
-            $"usage: petrii [{GetType().GetCustomAttribute<CommandAttribute>()!.Name}] [<flag>...]\n\n" +
-            $"{(_subcommandsList == string.Empty ? string.Empty : "subcommands:" + _subcommandsList + "\n\n")}" +
-            $"flags:\n{_flagsDescription}";
+        _subcommandsList = subcommands;
     }
 
     [HelpFlag]
     [Description("prints all subcommands and flags")]
     public void PrintHelp()
     {
-        Console.WriteLine("\n" + _usage + "\n");
+        string subcommands = string.Join(", ", _subcommandsList);
+
+        string usage =
+            $"usage: petrii [{GetType().GetCustomAttribute<CommandAttribute>()!.Name}] [<flag>...]\n\n" +
+            $"{(subcommands == string.Empty ? string.Empty : "subcommands: " + subcommands + "\n\n")}" +
+            $"flags:\n{_flagsDescription}";
+        Console.WriteLine("\n" + usage + "\n");
     }
 }

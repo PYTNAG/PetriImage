@@ -9,3 +9,4 @@
 /home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/refint/CLIHelper.dll
 /home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/CLIHelper.pdb
 /home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/ref/CLIHelper.dll
+/home/pytnag/Desktop/PetriImage/CLIHelper/obj/Debug/net8.0/CLIHelper.sourcelink.json

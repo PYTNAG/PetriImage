@@ -20,3 +20,6 @@
 /home/pytnag/Desktop/PetriImage/PetriImageCLI/bin/Debug/net8.0/petrii
 /home/pytnag/Desktop/PetriImage/PetriImageCLI/bin/Debug/net8.0/petrii.deps.json
 /home/pytnag/Desktop/PetriImage/PetriImageCLI/bin/Debug/net8.0/petrii.runtimeconfig.json
+/home/pytnag/Desktop/PetriImage/PetriImageCLI/bin/Debug/net8.0/PetriImage.Core.dll
+/home/pytnag/Desktop/PetriImage/PetriImageCLI/bin/Debug/net8.0/PetriImage.Core.pdb
+/home/pytnag/Desktop/PetriImage/PetriImageCLI/obj/Debug/net8.0/PetriImageCLI.sourcelink.json

@@ -5,7 +5,13 @@ namespace PetriImageCLI.Commands;
 [Command("global")]
 internal sealed class Global : CommandBase
 {
-    private readonly Dictionary<string, Type> _commands = CommandsRegisterer.RegisterCommands();
+    private readonly Dictionary<string, Type> _commands;
+
+    public Global()
+    {
+        _commands = CommandsRegisterer.RegisterCommands();
+        _subcommandsList.AddRange(_commands.Select(c => c.Key));
+    }
 
     public override void Execute() { }
 
