@@ -15,10 +15,12 @@ internal sealed class New : CommandBase
     public void SetSource(string source)
     {
         string sourceExt = Path.GetExtension(source);
+
         if (sourceExt != ".png" && sourceExt != ".ppng")
         {
             throw new Exception("New petri-png must be created from png image (including ppng)");
         }
+        
         _sourceImagePath = source;
     }
     public override void Execute()
@@ -27,10 +29,12 @@ internal sealed class New : CommandBase
         {
             throw new ArgumentNullException("Source image path must be specified (-s <pathToImage>)");
         }
+
         if (!Directory.Exists(_capturesFolderName))
         {
             Directory.CreateDirectory(_capturesFolderName);
         }
+
         PetriPng.NewFile(_sourceImagePath, _capturesFolderName, $"az@{DateTime.UtcNow:s}"); // az@yyyy-MM-ddThh:mm:ss
     }
 }
